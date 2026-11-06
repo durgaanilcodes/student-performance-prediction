@@ -1,25 +1,23 @@
 # 🎓 Student Performance Prediction
 
-A Machine Learning project that predicts student pass or fail outcomes based on academic marks in Mathematics, Science, and English.
+A Machine Learning classification project that predicts whether a student is likely to pass or fail based on academic marks in Mathematics, Science, and English.
 
 ## 📌 Project Overview
 
-This project explores the use of machine learning classification algorithms to predict student academic performance.
+This project explores how machine learning algorithms can be used to analyze student academic performance and predict pass/fail outcomes.
 
-The model uses subject marks as input and predicts whether a student is likely to pass or fail.
-
-## 🎯 Objectives
-
-- Predict student pass or fail outcomes.
-- Apply machine learning classification algorithms.
-- Compare Logistic Regression and Decision Tree models.
-- Understand the role of data preprocessing in machine learning.
-- Evaluate and compare model accuracy.
-
-## 🧠 Algorithms Used
+Two classification algorithms are implemented and compared:
 
 - Logistic Regression
 - Decision Tree Classifier
+
+## 🎯 Objectives
+
+- Predict student pass/fail outcomes.
+- Apply machine learning classification techniques.
+- Compare Logistic Regression and Decision Tree models.
+- Evaluate model performance using classification metrics.
+- Understand the role of data preprocessing in ML.
 
 ## 🛠️ Technologies Used
 
@@ -28,19 +26,40 @@ The model uses subject marks as input and predicts whether a student is likely t
 | Python | Programming |
 | Pandas | Data manipulation |
 | Scikit-learn | Machine learning |
+| Matplotlib | Data visualization |
 | CSV | Dataset storage |
 
-## 📂 Project Structure
+## 📊 Dataset
 
-```text
-student-performance-prediction/
-│
-├── README.md
-├── student_data.csv
-└── student_prediction.py
-```
+The dataset contains student marks in:
 
-## ⚙️ Installation
+- Mathematics
+- Science
+- English
+
+The target variable is `result`, representing the student's outcome.
+
+## 🤖 Machine Learning Models
+
+### Logistic Regression
+Used to classify student outcomes into pass or fail categories.
+
+### Decision Tree Classifier
+Used to learn decision rules from academic marks and predict student performance.
+
+## 📈 Model Evaluation
+
+The models are evaluated using:
+
+- Accuracy
+- Precision
+- Recall
+- F1-score
+- Confusion Matrix
+
+Note: The current dataset is limited. The displayed evaluation results should not be considered proof of real-world predictive performance. Testing on a larger dataset is needed.
+
+## 🚀 How to Run the Project
 
 ### 1. Clone the repository
 
@@ -48,49 +67,46 @@ student-performance-prediction/
 git clone https://github.com/durgaanilcodes/student-performance-prediction.git
 ```
 
-### 2. Navigate to the project directory
+### 2. Navigate to the project folder
 
 ```bash
 cd student-performance-prediction
 ```
 
-### 3. Install the required libraries
+### 3. Install dependencies
 
 ```bash
-pip install pandas scikit-learn
+pip install -r requirements.txt
 ```
 
-## ▶️ How to Run
-
-Run the Python script:
+### 4. Run the Python program
 
 ```bash
 python student_prediction.py
 ```
 
-The program compares the Logistic Regression and Decision Tree classification algorithms.
+### 5. Enter student marks
 
-## 📊 Expected Output
-
-The project produces a comparison of model accuracy for the two algorithms.
-
-*Note: Actual accuracy values should be added after running the program.*
+Enter Mathematics, Science, and English marks when prompted to receive the predicted outcome.
 
 ## 🔮 Future Improvements
 
-- Add more student academic and demographic features.
-- Improve model performance through hyperparameter tuning.
-- Create a web-based prediction interface using Streamlit.
-- Visualize student performance patterns.
-- Explore additional classification algorithms.
+- Use a larger real-world student dataset.
+- Improve model performance through feature engineering.
+- Add a graphical user interface using Streamlit.
+- Include additional machine learning algorithms.
+- Deploy the project as a web application.
 
 ## 👩‍💻 Author
 
 **Durga Anil**
 
-MCA — Artificial Intelligence & Machine Learning  
-Jain (Deemed-to-be University), Kochi
+MCA — Artificial Intelligence & Machine Learning
 
-- [GitHub](https://github.com/durgaanilcodes)
-- [LinkedIn](https://www.linkedin.com/in/durga-anil-908b70333/)
-- [Portfolio](https://durgaanilcodes.github.io/durga-ai-ml-portfolio/)
+GitHub: [durgaanilcodes](https://github.com/durgaanilcodes)
+
+LinkedIn: [Durga Anil](https://www.linkedin.com/in/durga-anil-908b70333/)
+
+---
+
+✨ *Learning, building, and exploring Machine Learning.*
