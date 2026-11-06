@@ -13,7 +13,7 @@ plt.figure(figsize=(8, 5))
 plt.bar(models, accuracies)
 
 plt.title("Student Performance Prediction - Model Comparison")
-plt.xlabel("Machine Learning Models")
+plt.xlabel("Machine Learning Models") 
 plt.ylabel("Accuracy")
 plt.ylim(0, 1.1)
 
