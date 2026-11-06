@@ -1,29 +1,20 @@
-import pandas as pd
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LogisticRegression
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.metrics import accuracy_score
+import matplotlib.pyplot as plt
 
-# Load dataset
-data = pd.read_csv("student_data.csv")
+# Calculate model accuracy
+lr_accuracy = accuracy_score(y_test, lr_pred)
+dt_accuracy = accuracy_score(y_test, dt_pred)
 
-# Features (X) and Target (y)
-X = data[["math", "science", "english"]]
-y = data["result"]
+# Model comparison
+models = ["Logistic Regression", "Decision Tree"]
+accuracies = [lr_accuracy, dt_accuracy]
 
-# Split data
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+# Create bar chart
+plt.figure(figsize=(8, 5))
+plt.bar(models, accuracies)
 
-# Logistic Regression
-lr = LogisticRegression()
-lr.fit(X_train, y_train)
-lr_pred = lr.predict(X_test)
+plt.title("Student Performance Prediction - Model Comparison")
+plt.xlabel("Machine Learning Models")
+plt.ylabel("Accuracy")
+plt.ylim(0, 1.1)
 
-# Decision Tree
-dt = DecisionTreeClassifier()
-dt.fit(X_train, y_train)
-dt_pred = dt.predict(X_test)
-
-# Accuracy
-print("Logistic Regression Accuracy:", accuracy_score(y_test, lr_pred))
-print("Decision Tree Accuracy:", accuracy_score(y_test, dt_pred))
+plt.show()
